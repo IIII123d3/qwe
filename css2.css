@@ -1154,3 +1154,148 @@ html {
     color: #777779;
     max-width: 220px
 }
+.global-content__modal {
+    position: relative;
+    width: 600px;
+    max-width: 600px;
+    max-height: 100%;
+    background: #26272c
+}
+
+.global-content__modal-window {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14,14,16,.7);
+    z-index: 151
+}
+
+.global-content__modal-window--btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: 0 0
+}
+
+.global-content__modal-body {
+    display: flex;
+    justify-content: flex-start;
+    padding: 32px 20px 26px;
+    flex-direction: column;
+    max-height: 560px;
+    overflow-y: auto
+}
+
+.global-content__modal-body .select2-container--default {
+    max-width: calc(100vw - 40px)!important
+}
+
+.global-content__modal-body .content-inline,.global-content__modal-body form {
+    width: 100%;
+    border-radius: 4px
+}
+
+.global-content__modal-body.modal-smiles-content {
+    height: 400px;
+    padding: 16px
+}
+
+@media (max-width: 600px) {
+    .global-content__modal-body.modal-smiles-content {
+        height:300px
+    }
+}
+
+.global-content__modal-body.modal-smiles-content p {
+    margin: 10px 0
+}
+
+.global-content__modal-body .tox-editor-header .tox-tbtn--select span.tox-tbtn__select-label {
+    position: relative;
+    top: 7px
+}
+
+.global-content__modal-body .tox-editor-header span {
+    height: 32px!important;
+    width: 42px!important;
+    background-color: rgba(0,0,0,0)!important;
+    border-radius: 1px!important
+}
+
+.global-content__modal-body .tox-editor-header span.tox-split-button__chevron {
+    width: 15px!important;
+    position: relative;
+    left: -8px
+}
+
+.global-content__modal-body .tox-editor-header span::after,.global-content__modal-body .tox-editor-header span::before {
+    content: none
+}
+
+.global-content__modal-body .tox-toolbar__group>div.tox-split-button:first-of-type>span.tox-tbtn>span {
+    display: contents
+}
+
+.global-content__modal-body .tox .tox-tbtn {
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+.global-content__modal-footer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px 22px
+}
+
+.global-content__modal-footer .btn-global {
+    margin: 0 auto
+}
+
+.global-content__modal-footer>:not(:first-child) {
+    margin-left: 6px
+}
+
+.global-content__modal-spam:not(:first-child) {
+    margin-top: 20px
+}
+
+.global-content__modal-spam-avatar a {
+    display: flex;
+    align-items: center
+}
+
+.global-content__modal-spam-avatar img {
+    margin-right: 10px
+}
+
+.global-content__modal-spam--info {
+    display: flex
+}
+
+@media (max-width: 600px) {
+    .global-content__modal-spam--info {
+        flex-direction:column
+    }
+}
+
+.global-content__modal-spam--info-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+.global-content__modal-spam--info-block dd {
+    margin-inline-start:10px}
+
+.global-content__modal-spam--info-block dt {
+    font-size: 13px;
+    color: #8f8f91
+}

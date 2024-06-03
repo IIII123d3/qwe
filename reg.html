@@ -1,0 +1,29 @@
+<head>
+    <title>Сервисный центр</title>
+    <link rel="stylesheet", href="css2.css">
+    <script src="js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<div id="registerModal" aria-hidden="false" tabindex="-1" role="dialog" class="global-content__modal-window in" style="padding-right: 0px;">
+    <div class="global-content__modal" style="width: 350px;">
+        <button class="global-content__modal-window--btn-close" data-dismiss="modal">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <div class="modal-content primary-content">
+            <h3 class="authorization__title">
+                Регистрация
+            </h3>
+            <div class="global-content__modal-body" style="padding: 0">
+                <form class="authorization__form" action="javascript:Auth.register()">
+                    <input class="authorization__input" type="text" id="register_nickname" placeholder="Ник пользователя" minlength="1" maxlength="16" required="">
+                    <input class="authorization__input" type="text" id="register_email" placeholder="Электронная почта" minlength="1" required="">
+                    <input class="authorization__input" type="password" id="register_password" placeholder="Пароль" minlength="1" required="">
+                    
+                    <button class="authorization__btn mb32" type="submit">
+                        Зарегистрироваться <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

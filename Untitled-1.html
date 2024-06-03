@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Форма входа</h2>
+<form id="login_form" onsubmit="handleLogin(event)">
+  <label for="login_credential_form">E-mail или ник пользователя:</label><br>
+  <input type="text" id="login_credential_form" name="login_credential_form"><br>
+  <label for="login_password_form">Пароль:</label><br>
+  <input type="password" id="login_password_form" name="login_password_form"><br>
+  <input type="submit" value="Войти">
+</form>
+
+<h2>Форма регистрации</h2>
+<form id="register_form" onsubmit="handleRegister(event)">
+  <label for="register_credential_form">E-mail или ник пользователя:</label><br>
+  <input type="text" id="register_credential_form" name="register_credential_form"><br>
+  <label for="register_password_form">Пароль:</label><br>
+  <input type="password" id="register_password_form" name="register_password_form"><br>
+  <input type="submit" value="Регистрация">
+</form>
+
+<script>
 var Users = {}; // Объект для хранения зарегистрированных пользователей
 
 function handleLogin(event) {
@@ -9,7 +32,14 @@ function handleLogin(event) {
     Auth.login(user, password);
 }
 
+function handleRegister(event) {
+    event.preventDefault(); // Предотвращаем обновление страницы
 
+    var user = document.getElementById('register_credential_form').value;
+    var password = document.getElementById('register_password_form').value;
+
+    Auth.register(user, password);
+}
 
 var Auth = {
     login: function(user, password) {
@@ -31,4 +61,7 @@ var Auth = {
         }
     }
 };
+</script>
 
+</body>
+</html>

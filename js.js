@@ -22,7 +22,7 @@ var Auth = {
         }
     },
     register: function(user, password) {
-        // Регистрируем нового пользователя
+        // Регистрируем нового пользователя/
         if (!Users[user]) {
             Users[user] = password;
             console.log('Пользователь ' + user + ' успешно зарегистрирован.');
